@@ -15,16 +15,16 @@ checkBtn.addEventListener("click", () => {
     return;
   }
 
-  // Regular expression to validate US phone numbers
-  const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
+  // Regular expression to validate Norwegian phone numbers
+  const regex = /^((\+|00)47)?\s?(\d{2}|\d{3})\s?\d{2}\s?\d{3}$/;
 
   // Check if the user input matches the regular expression
   if (regex.test(userInput)) {
-    // If the input is valid, display it in the results div as a valid US number
-    resultsDiv.textContent = `Valid US number: ${userInput}`;
+    // If the input is valid, display it in the results div as a valid Norwegian number
+    resultsDiv.textContent = `Valid Norwegian number: ${userInput}`;
   } else {
-    // If the input is not valid, display it in the results div as an invalid US number
-    resultsDiv.textContent = `Invalid US number: ${userInput}`;
+    // If the input is not valid, display it in the results div as an invalid Norwegian number
+    resultsDiv.textContent = `Invalid Norwegian number: ${userInput}`;
   }
 });
 
